@@ -43,7 +43,7 @@ def main():
     ## list all words containing matched word
     print(f"There are {len(matchedwords['matched'])} words that contain the word '{args.searchword}' in the Pokemon Item API!")
     print(f"List of Pokemon items containing '{args.searchword}': ")
-    print(matchedwords)
+    print('MMMMM', matchedwords)
 
     ## export to excel with pandas
     # make a dataframe from our data
@@ -54,6 +54,7 @@ def main():
     # index=False prevents the index from our dataframe from
     # being written into the data
     itemsdf.to_excel("pokemonitems.xlsx", index=False)
+    itemsdf.to_json("pokemonitems.json", orient=None)
 
     print("Gotta catch 'em all!")
 
