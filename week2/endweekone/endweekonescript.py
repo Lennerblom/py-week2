@@ -53,8 +53,8 @@ def main():
     x = np.arange(len(labels))  # the label locations
     width = 0.35  # the width of the bars
     fig, ax = plt.subplots()
-    rects1 = ax.bar(x + width/2, min_temp, width, label='low')
-    rects2 = ax.bar(x - width/2, max_temp, width, label='high')
+    rects1 = ax.bar(x + width/2, min_temp, width, label='low', facecolor='b')
+    rects2 = ax.bar(x - width/2, max_temp, width, label='high', facecolor='r')
     # Adding labels to axis' and bars
     ax.set_ylabel('Degrees Ferenheit')
     ax.set_title(f'High Temperatures for {city}')
