@@ -22,7 +22,7 @@ def city(city_name):
 
     r = requests.get(URI)
     weather_data = r.json()
-    main_weather = weather_data['weather'][0]['main']
+    main_weather = weather_data['weather'][0]['description']
     current_temp = weather_data['main']['temp']
     return render_template("wednesday.html", weather=main_weather, temp=current_temp, city=city_name)
     
