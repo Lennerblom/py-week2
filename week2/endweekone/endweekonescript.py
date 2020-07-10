@@ -15,8 +15,9 @@ load_dotenv()
 
 WEATHER_KEY = os.getenv("WEATHER_KEY")
 
-def main():
-    zip_code = input("Please enter a 5 digit zipcode\n")
+def main(zip):
+    # zip_code = input("Please enter a 5 digit zipcode\n")
+    zip_code = zip
     weather_uri = f'http://api.openweathermap.org/data/2.5/forecast?zip={zip_code},us&units=imperial&appid={WEATHER_KEY}'
 
     r = requests.get(weather_uri)
@@ -78,7 +79,8 @@ def main():
 
     fig.tight_layout()
 
-    plt.show()
+    plt.savefig("/Users/michaellennerblom/tlg-python/py-week2/week2/endweekone/weathergraph.png", bbox_inches='tight')
+    # plt.show()
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
