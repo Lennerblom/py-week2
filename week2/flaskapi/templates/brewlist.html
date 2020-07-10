@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Street></td>
+            <td>Website</td>
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["street"]}}</td>
+               <td> {{ row["web"]}}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">enter a new city</a>
+   </body>
+</html>
